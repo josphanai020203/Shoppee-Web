@@ -93,12 +93,93 @@
                         </li>
                         <li class="header__navbar--item"><i class="icon far fa-question-circle"></i><a class="hoverA" href="">Hỗ Trợ</a></li>
                         <li class="header__navbar--item"><i class="icon fas fa-atlas"></i><a class="hoverA" href="">Tiếng việt</a></li>
-                        <li class="header__navbar--item border--right"><a class="hoverA" href="">Đăng kí</a></li>
-                        <li class="header__navbar--item"><a class="hoverA" href="">Đăng Nhập</a></li>
+                        <li id="SignUpbtn" onclick="document.getElementById('modal-signUp').style.display = 'flex'" class="header__navbar--item border--right"><a class="hoverA" href="#">Đăng kí</a></li>
+                        <li class="header__navbar--item" onclick="document.getElementById('modal-signIn').style.display = 'flex'"><a class="hoverA" href="#">Đăng Nhập</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <!-- Modal SignUp ==========================================================================================-->
+        <div id="modal-signUp" class="modal-signUp">
+          <div class="modal-signUp-container">
+            <div class="modal-signUp-content">
+                <header class="signUp-head">
+                    <div class="signUp-head-tab">
+                        <p class="signUp-head-item">Đăng Ký</p>
+
+                    </div>
+                    <div class="signUp-head-tab textBgColor" >
+                        <p class="signUp-head-item redColor" id="signUp">Đăng Nhập</p>
+
+                    </div>
+                </header>
+                <form class="signUp-form" action="" method="get" style="margin: 0 24px;">
+                    <input placeholder="Số điện thoại" type="text" class="signUp-sdt">
+                    <div class="signUp-form--capcha">
+                        <input placeholder="Nhập mã ngẫu nhiên/mã hiển thị ở bên phải" type="text">
+                        <p>CapCha</p>
+                    </div>
+                    <div class="signUp-form--confirm">
+                        <input placeholder="Mã xác minh" type="text" name="" id="">
+                        <button class="hover" type="submit">Gửi Mã xác minh</button>
+                    </div>
+                    <footer class="signUp__footer">
+
+                        <p>Bằng việc đăng kí, bạn đã đồng ý với Shopee về <a class="redColor" href="">Điều khoản dịch vụ</a> & <a class="redColor" href="">Chính sách bảo mật</a></p>
+                    </footer>
+                    <div class="signUp__btn">
+                        <button class="signUp__btnClose hover" onclick="document.getElementById('modal-signUp').style.display = 'none'">Trở lại</button>
+                        <button class="signUp__btnSignUp hover">Đăng Kí</button>
+
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div id="modal-signIn" class="modalSignIn">
+          <div class="modalSignIn-container">
+              <div class="modalSignIn-content">
+                  <header class="signIn-head">
+                      <div class="signIn-head-tab textBgColor">
+                          <p class="signIn-head-item redColor" id="signIn">Đăng Ký</p>
+    
+                      </div>
+                      <div class="signIn-head-tab">
+                          <p class="signIn-head-item">Đăng Nhập</p>
+    
+                      </div>
+                  </header>
+                  <div class="signIn__body">
+                      <form class="signIn__inputForm">
+                          <input placeholder="Email/Số Điện thoại/Tên Đăng Nhập" type="text" class="signIn__inputForm--Name" autocomplete="username"> 
+
+                              <input placeholder="Password" type="password" class="signIn__inputForm--pass" value="" autocomplete="current-password">
+                      </form>
+                      <div>
+                          <button class="signIn__btn">Đăng Nhập</button>
+                      </div>
+                      <div class="signIn__subform blueColor">
+                          <a href="#">Quên mật khẩu</a>
+                          <a href="#">Đăng Nhập với SMS</a>
+
+                      </div>
+                      <br>
+                      <div class="span-line">
+                          <span class="signIn__span">HOẶC</span>
+
+                      </div>
+                      <div class="signIn__btnApps">
+                          <button class="signIn__btnApp"><div class="facebook"></div><div class="text-facebook">Facebook</div></button>
+                          <button class="signIn__btnApp"><div class="google"></div><div class="text-facebook">Google</div></button>
+                          <button class="signIn__btnApp"><div class="apple"></div><div class="text-facebook">Apple</div></button>
+                      </div>
+
+                  </div>
+            </div>
+          </div>
+        </div>
+        
+        
         <div class="container">
 
         </div>
@@ -106,5 +187,6 @@
 
         </footer>
     </div>
+    <script src="./acsets/JavaScript/main.js"></script>
 </body>
 </html>

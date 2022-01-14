@@ -24,6 +24,22 @@ li {
 ul {
     margin-top: 0;
 }
+/* ===========COLOR========== */
+.redColor {
+    color: red !important;
+}
+.blueColor {
+    color: blue !important;
+}
+
+/* ============BGcolor =============*/
+.textBgColor{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/* ==========INPUT============= */
+.boxInput {
+    padding:12px;
+}
 .clear::after {
     content: "";
     display: table;
