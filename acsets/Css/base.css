@@ -1,0 +1,69 @@
+:root {
+    --white-color :#fff;
+    --black-color :#000;
+    --text-color :#333;
+
+}
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+    color: var(--white-color);
+}
+ul {
+    margin-top: 0;
+}
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.hover:hover {
+    opacity: 0.6;
+    cursor: pointer;
+
+}
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid_full-width {
+    width: 100%;
+}
+.gid_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.border--left {
+    border-left:1px solid rgba(204, 204, 204, 0.5) ;
+}
+.border--right {
+    border-right:1px solid rgba(204, 204, 204, 0.5) ;
+}
+.text-overflow-dots {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* ++=======++++ ANIMATION ======== */
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}

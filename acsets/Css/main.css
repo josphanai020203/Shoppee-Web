@@ -1,0 +1,150 @@
+
+/* ========================================================HEADER=================================================== */
+.header {
+    background-image: linear-gradient(-180deg,#f53d2d,#f63);
+    
+}
+.header__nav {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    font-size: 1.3em;
+}
+.header__navbar--right {
+    padding-inline-start: 0;
+}
+.header__navbar--right,.header__navbar--left {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-weight: 300;
+}
+.header__navbar--item {
+    padding: 0 8px;
+    position: relative;
+}
+.hoverA:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.icon {
+    font-size: inherit;
+    padding: 0 3px;
+}
+/* =========QR============ */
+.qrbox {
+    position: absolute;
+    background-color: white;
+    width: 186px;
+    top: 150%;
+    left: 0;
+    padding: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.329) ;
+    display: none;
+    transition: all 0.5s linear;
+    border-radius: 5px;
+    animation: fadeIn 0.3s linear;  
+}
+.qrbox::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top :-20px;
+    left: 0;
+    display: block;
+}
+.qrbox__img--main {
+    width: 100%;
+}
+.qrbox__img {
+    padding: 5px 5px 0;
+}
+.qr-footer--img {
+    width: 50%;
+    float: left;
+    height: 25px;
+    padding: 0px 6px 8px;
+}
+.header__nav .header__navbar--item:nth-child(3):hover .qrbox {
+    display: block;
+}
+/* Notification--Header */
+.notification {
+    width: 404px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top:160%;
+    border-radius: 3px;
+    border: 1px solid #d3d3d3;
+    animation: nora 0.2s ease-in-out;
+    display: none;
+}
+.notification--hover:hover .notification {
+    display: block;
+}
+.notification__header {
+    color: #ccc;
+    padding-left: 20px;
+    border-bottom: 0.5px solid #cccccccf;
+}
+.notification__list {
+    padding-left: 0;
+    max-height: 360px;
+}
+.notification__list-item {
+    width: 100%;
+    background-color: rgb(245, 61, 45,0.2);
+    height: 90px;
+    padding: 10px 10px;
+}
+
+.notification__list-item-link {
+    display: flex;
+}
+.notification__imgProduct {
+    width: 48px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.notification__desproduct {
+    color: #ccc;
+}
+.notification__desproduct--main {
+    display: block;
+    color: #111212;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.notification__desproduct--sub {
+    /* max-width: 330px; */
+    display: block;
+    font-size: 1.2rem;
+    color: #aaa;
+}
+.hoverProduct:hover {
+    background-color: white;
+
+}
+.notification__footer {
+    padding: 12px 0;
+    text-align: center;
+}
+.notification__footer--link {
+    color: var(--text-color);
+    width: 100%;
+
+}
+@keyframes nora {
+    from {
+        transform: scale(0);
+        transform-origin: top right;
+    }
+    to {
+        transform: scaleX(1);
+        transform-origin:none;
+    }
+}
