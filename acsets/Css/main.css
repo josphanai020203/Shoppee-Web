@@ -169,12 +169,17 @@
     z-index: 10;
     background-color: rgba(0,0,0,0.25);
     display: none;
+    animation: fadeIn 0.2s ease-in;
 }
 .modalSignIn-container,
 .modal-signUp-container {
+    --growth-from :0.6;
+    --growth-to:1;
     display: flex;
     margin:auto;
     background-color: #fff;
+    animation: growth 0.2s linear;
+
 }
 .modalSignIn-container,
 .modal-signUp-container {
@@ -280,8 +285,7 @@
     border: 1px solid #ccc;
     color: var(--white-color);
 }
-.modalSignIn {
-}
+
 .signIn__body {
     margin: 0 24px;
     position: relative;
@@ -300,11 +304,18 @@
     margin-top: 10px;
 }
 .signIn__btn {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 300;
     width: 100%;
     padding: 13px 0;
     background-color: #ee4d2d;
     border: 1px solid #ccc;
     cursor: pointer;
+}
+.disabledButton {
+    opacity: 0.6;
+    cursor:not-allowed;
 }
 .signIn__subform {
     margin-top: 10px;
@@ -342,6 +353,7 @@
 }
 .signIn__inputForm {
     padding-top: 10px;
+    position: relative;
 }
 .signIn__btnApps {
     display: flex;
@@ -356,6 +368,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .facebook {
     background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7b95007f3377150730bbb5d1ddb477d6.png);
@@ -413,4 +426,106 @@ display: inline-block;
 
 }
 
+.eyePass {
+    position: absolute;
+    right: 10px;
+    bottom: 28px;
+    font-size:2rem;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 111;
+}
+/* HEADER WITH SEARCH */
+.header-with-search {
+    --header-height :120px;
+    --header-navHeight : 35px;
+    --header-searchHeight : calc(var(--header-height) - var(--header-navHeight ));
+    height: var(--header-searchHeight);
+    display: flex;
+    align-items: center;
+}
+.header__logoBox {
+    width: 15%;
+    padding: 0 40px 0 0;
 
+}
+.header__search {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    flex: 1;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 4px;
+    border-radius: 4px;
+
+}
+.header__search-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+}
+.header__search-form {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    user-select: none;
+    position: relative;
+}
+.header__cart {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    color: #fff;
+    margin-left: 20px;
+}
+.header__search-input--btn {
+    padding: 0 20px;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+
+}
+.header__search-historys::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    top :-6px
+}
+.header__search-historys {
+    position: absolute;
+    top: 40px;
+    left: -4px;
+    background-color: #fff;
+    width: 60%;
+    border-radius: 2px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+    box-sizing: border-box;
+    display: none;
+}
+.searchHistory {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+.searchHistory__listItem li:hover {
+    background-color: #ccc;
+}
+.searchHistory__listItem li a{
+    color: #000;
+
+}
+.searchHistory__listItem {
+    width: 100%;
+    padding-inline-start: 0;
+}
+.searchHistory__item {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
