@@ -60,6 +60,8 @@ window.onclick = function(event){
         setTimeout(function(){
             document.getElementById('modalSignIn-container').style.animation = "none";
             document.getElementById('modal-signUp-container').style.animation = "none";
+            document.querySelector('.modalSignIn').style.animation = 'none';
+            document.querySelector('.modal-signUp').style.animation = 'none';
 
         },200)
     }
