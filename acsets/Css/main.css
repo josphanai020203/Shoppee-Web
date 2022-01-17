@@ -529,6 +529,53 @@ display: inline-block;
     width: 100%;
     padding-inline-start: 0;
 }
-.searchHistory__item {
+.header__cart {
+    position: relative;
+}
+.header__cart:hover .header__cart--no-cart  {
+    display: flex;
+
+}
+.header__cart--no-cart::before {
+    content: "";
+    position: absolute;
+    border-color: transparent transparent #fff transparent;
+    top: -10%;
+    right: 10px;
+    border-width: 13px 28px;
+    border-style: solid;
+}
+.header__cart--no-cart {
+    position: absolute;
+    width: 400px ;
+    height: 260px;
+    top: 200%;
+    right: 0;
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    flex-direction: column;
+    z-index: 111;
+    display: none;
+    animation: growth 0.2s linear;
+    --growth-from :0.1;
+    --growth-to :1;
+
+
+
+}
+.header__cart--no-cart p {
+    color: #000;
+    position: absolute;
+    top:75%;
+    margin-bottom: 30px;
+    font-size:medium;
+}
+.header__cart--NC-img {
+    width: 30%;
+    display: flex;
+    margin: auto;
 
 }
