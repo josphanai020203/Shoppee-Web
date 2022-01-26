@@ -44,7 +44,8 @@
     display: none;
     transition: all 0.5s linear;
     border-radius: 5px;
-    animation: fadeIn 0.3s linear;  
+    animation: fadeIn 0.3s linear;
+    z-index: 111;  
 }
 .qrbox::before {
     content: "";
@@ -267,9 +268,6 @@
     align-items: center;
     text-align: center;
     margin-bottom: 20px;
-}
-.signUp__btn {
-
 }
 .signUp__btnClose {
     padding: 8px 18px;
@@ -557,6 +555,7 @@ display: inline-block;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     flex-direction: column;
+    cursor: default;
     z-index: 111;
     display: none;
     animation: growth 0.2s linear;
@@ -578,4 +577,44 @@ display: inline-block;
     display: flex;
     margin: auto;
 
+}
+/* CONTAINER */
+.container {
+    background-color: #F5F5F5;
+}
+/* Catagory */
+.category {
+    background-color: #fff;
+    border-radius: 2px;
+}
+.category__heading {
+    padding: 12px 16px;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.category__heading--icon {
+    font-size: 1.4rem;
+    margin-right: 8px;
+    position: relative;
+    top: -1px;
+}
+.category-item {
+
+}
+.category-list {
+    padding: 0 0 17px 0;
+}
+.category-item__link {
+    color: #000;
+    position: relative;
+    right: 0;
+    padding: 4px 16px;
+    display: block;
+    font-size: 1.4rem;
+    transition: right linear 0.1s;
+}
+.category-item__link:hover{
+    color: var(--main-color);
+    right: -4px;
 }
