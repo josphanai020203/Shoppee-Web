@@ -109,3 +109,7 @@ inputPass.oninput = function (event)
         
     }
 }
+var selectInput = document.querySelector('.select-input__icon');
+selectInput.onclick = function(event){
+    document.querySelector('.select-input__list').classList.toggle('displayBlock');
+}

@@ -589,6 +589,7 @@ display: inline-block;
 }
 .category__heading {
     padding: 12px 16px;
+    margin-top: 0;
     font-size: 1.7rem;
     letter-spacing: 1px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -617,4 +618,97 @@ display: inline-block;
 .category-item__link:hover{
     color: var(--main-color);
     right: -4px;
+}
+/* ===================== */
+/* .app-content{
+    display: flex;
+    font-size: 1.5rem;
+} */
+
+.home-filter {
+    background-color: rgba(0, 0, 0, 0.04);
+    display: flex;
+    padding: 16px 12px;
+    align-items: center;
+    border-radius: 3px;
+    
+}
+.home-filter__label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    padding: 0 8px;
+    font-size: 1.5rem;
+    color: #555555;
+}
+.home-filter__pageControl {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-filter__btn {
+    min-width: 90px;
+    background-color: #fff;
+    margin-right: 12px;
+    border-radius: 3px;
+}
+.select-input__label {
+    font-size: 1.4rem;
+}
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+.select-input {
+    position: relative;
+}
+.select-input__list {
+    position: absolute;
+    background-color:#fff;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    top: 36px;
+    border-radius: 3px;
+    display: none;
+}
+.select-input__item {
+    width: 100%;
+    color: #000;
+    padding: 12px 12px;
+    border-radius: 3px;
+
+}
+.select-input__link{
+    font-size: 1.3rem;
+}
+.select-input__link:hover {
+    color: var(--main-color);
+}
+.home-filter__page {
+    margin-left: auto;
+}
+.home-filter__page-num {
+    font-size: 1.4rem;
+    margin-right: 22px;
+}
+.home-filter__page-current {
+    color: var(--main-color);
+}
+.home-filter__pageControl {
+
+}
+.home-filter__pageControl--link {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    margin-right: 1px;
+}
+.home-filter__pageControl--icon {
+    font-size: 1.4rem;
 }

@@ -39,6 +39,16 @@ ul {
     background-color: rgba(0, 0, 0, 0.1);
 }
 /* ==========INPUT============= */
+.select-input {
+    padding: 0 12px;
+    border-radius: 2px;
+    height: 34px;
+    min-width: 200px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .boxInput {
     padding:12px;
 }
@@ -50,6 +60,29 @@ ul {
 .hover:hover {
     opacity: 0.6;
     cursor: pointer;
+
+}
+.pt17{
+    padding-top: 17px;
+}
+.displayBlock {
+    display: initial !important;
+}
+.btn{
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
 
 }
 /* ============ Responsive ============ */
