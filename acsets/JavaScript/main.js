@@ -113,3 +113,7 @@ var selectInput = document.querySelector('.select-input__icon');
 selectInput.onclick = function(event){
     document.querySelector('.select-input__list').classList.toggle('displayBlock');
 }
+var homeProductLiked = document.querySelector('.home-product-item__like');
+homeProductLiked.onclick = function(){
+    document.querySelector('.home-product-item__like').classList.toggle('home-product-item__liked');
+}
