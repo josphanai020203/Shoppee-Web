@@ -496,6 +496,7 @@ display: inline-block;
     top :-6px
 }
 .header__search-historys {
+    z-index: 1;
     position: absolute;
     top: 40px;
     left: -4px;
@@ -676,6 +677,8 @@ display: inline-block;
     top: 36px;
     border-radius: 3px;
     display: none;
+    z-index: 11;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .select-input__item {
     width: 100%;
@@ -712,17 +715,23 @@ display: inline-block;
 .home-filter__pageControl--icon {
     font-size: 1.4rem;
 }
+.home-product {
+    margin-bottom: 10px;
+}
 .home-product-item{
-    cursor: pointer;
+    display: block;
     margin-top: 10px;
     position: relative;
     background-color: var(--white-color);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     transition: top linear 0.1s;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+
 }
 .home-product-item:hover {
     top: -1px;
-    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 20px; ;
 }
 .home-product__img{
     padding-top: 100%;
@@ -866,7 +875,86 @@ i.home-product-item__likeIcon-fill {
 }
 .home-product-item__sale-off-label{
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: var(--white-color);
     line-height: 1.4rem;
+}
+.pagination {
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    user-select: none;
+}
+.pagination-item {
+    color:#939393;
+    font-size: 1.4rem;
+    margin-left: 10px;
+
+
+    
+}
+.pagination-link {
+    --height : 30px;
+    font-size: 1.6rem;
+    min-width: 40px;
+    display: block;
+    text-align: center;
+    height: var(--height);
+    line-height: var(--height);
+    border-radius: 4px;
+    
+
+}
+.pagination-item--active .pagination-link {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.pagination-item--active:hover .pagination-link {
+    opacity: 0.9;
+}
+/* ========================= */
+.footer {
+   padding: 12px 0;
+    border-top: 3px var(--main-color) solid;
+}
+.footer__heading {
+font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.footer-list {
+    margin: 0;
+    padding: 0;
+}
+.footer-item {
+    color: #555;
+    font-size: 1.3rem;
+    padding: 4px 0;
+}
+.footer-item__link:hover {
+    color: var(--main-color);
+    opacity: 0.8;
+}
+.footer-item__link {
+    display: flex;
+    align-items: center;
+    
+}
+.footer-item__icon {
+    font-size: 2rem;
+   margin: 0px 8px 0 0;
+}
+.footer-download {
+    display: flex;
+}
+.footer-download-qr {
+    width: 80px;
+    object-fit: contain;
+    border: 1px solid var(--text-color);
+    margin-right: 10px;
+
+}
+.footer-download-app-img {
+    margin: 4px 0;
+    height: 28px;
 }
